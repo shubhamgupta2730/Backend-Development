@@ -14,7 +14,7 @@ console.log(typeof {name: 'John', age: 30});
 console.log(typeof [1, 2, 3]);
 console.log(typeof function() {});
 
-//typeof NaN is number but it is a bug in js
+
 console.log(typeof NaN);
 
 console.log(typeof Infinity);
@@ -61,3 +61,54 @@ console.log(!(10>5)); //false
 console.log(!(5>10)); //true
 console.log(0 && 4); //0
 console.log(0 || 4); //4
+
+//* comparison operators:
+// ==, ===, !=, !==, >, <, >=, <=
+// == ABSOLUTE EQUALITY
+// === STRICT EQUALITY
+//,  != ABSOLUTE INEQUALITY
+
+//* String based operator: 
+
+//concatenate operator (+)
+console.log('hello' + 'world');
+console.log(5+5+'5')
+
+//* BITWISE OPERATORS:
+// &, |, ^, ~, <<, >>
+//these operators dosen't directly operate on numbers but instead operate on binary representation of numbers
+// & - bitwise AND
+// | - bitwise OR
+// ^ - bitwise XOR
+// ~ - bitwise NOT
+// << - left shift
+// >> - right shift
+
+//left shift operator (<<) - shifts the bits of the number to the left and fills 0 on empty spaces
+// 2 << 1 = 4
+// 2 << 2 = 8
+// 2 << 3 = 16
+
+//right shift operator (>>) - shifts the bits of the number to the right and fills 0 on empty spaces
+// 2 >> 1 = 1
+// 2 >> 2 = 0
+// 2 >> 3 = 0
+
+console.log(2 & 3); //2
+console.log(2 | 3); //3
+console.log(2 ^ 3); //1
+console.log(~2); //-3
+console.log(2 << 1); //4
+console.log(2 >> 1); //1
+
+//* Ternary Operator:
+//. ? :
+//syntax: condition ? expression1 : expression2
+
+//exponential operator:
+//. **
+console.log(2**3); //8
+
+
+
+

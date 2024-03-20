@@ -46,3 +46,13 @@ Variables are buckets in memory that stores values.
 - var
 - const
 
+## Statement and Expression: 
+- **Statement** - A statement is a complete line of code.
+- **Expression** - An expression is any part of a statement.
+
+### 4 Pillars of JS: 
+- Coercion
+- Scopes
+- Asynchronous
+- Objects and Classes
+
