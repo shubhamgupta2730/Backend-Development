@@ -15,8 +15,6 @@
 
 **StackShare.io**: shows a list of companies using different tech stacks.
 
-
-
 # Introduction to JavaScript
 
 - It is a multipurpose programming language that can be used for mobile apps, web apps, etc.
@@ -25,34 +23,44 @@
 
 * Earlier JS was known as ECMAscript
 
-###  Data Types in JS:
+### Data Types in JS:
 
 **Primitive Data Type:**
 Null, Undefined, boolean, string, Number, Symbol
 
-### Operators: 
+**Non primitive:**
+
+- Array, Object, Function
+
+### Operators:
 
 - typeof operator:- we get typeof value in string format
 
 **Program and Process:**
+
 - Program is any code that is written inside file.
 - Process is the running program
 
 ## Variables:
+
 Variables are buckets in memory that stores values.
 
 **3 ways to initialize Variables**
+
 - let
 - var
 - const
 
-## Statement and Expression: 
+## Statement and Expression:
+
 - **Statement** - A statement is a complete line of code.
 - **Expression** - An expression is any part of a statement.
 
-### 4 Pillars of JS: 
+### 4 Pillars of JS:
+
 - Coercion
 - Scopes
 - Asynchronous
 - Objects and Classes
 
+## Coercion

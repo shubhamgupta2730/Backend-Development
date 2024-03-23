@@ -26,3 +26,6 @@ console.log({name: 'John', age: 30});
 
 //symbol:
 console.log(Symbol('hello'));
+
+//non primitive data types:
+//Array, Object, Function
