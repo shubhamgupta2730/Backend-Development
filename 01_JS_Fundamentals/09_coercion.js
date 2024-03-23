@@ -9,7 +9,7 @@
 // 8. always use explicit coercion
 // 9. use Number, String, Boolean to convert values to their respective types
 // 10. use parseInt and parseFloat to convert values to numbers
- 
+
 
 //? everything in js is object: it is a false statement
 // primitive values are not objects in js.
@@ -39,7 +39,7 @@
 /*
 hint-> number: valueOf() -> toString()
 hint-> string: toString() -> valueOf()
-*/  
+*/
 
 //for an example:
 /*
@@ -59,7 +59,7 @@ undefined + 1 = NaN
 //console.log("undefined" + undefined) //undefinedundefined
 //console.log("undefined" + null) //undefinednull
 //console.log("undefined" -" undefined"); //NaN
-console.log('a'-'b') //NaN
+console.log('a' - 'b') //NaN
 
 //? In multiplication operator, if any one operation is NaN then output will be NaN.
 //infinity * 0 is NaN.
@@ -93,10 +93,36 @@ console.log('true' - 8); //NaN
 //[1, 2, 2] -> NaN;
 
 //valueof() is not an abstract operation, so we can use it.
- 10 - {"a":10, valueof(){return 8;}} //2 why? because valueof() function is called and it returns 8. so, 10-8 = 2. 
+10 - { "a": 10, valueof() { return 8; } } //2 why? because valueof() function is called and it returns 8. so, 10-8 = 2. 
 
- //10.toString() //error why:? because 10 is a number and it dosen't have a toString() method.
+//10.toString() //error why:? because 10 is a number and it dosen't have a toString() method.
 
- 
+
+
+//? Type interconversion: coercion
+//implicit and explicit coercion.
+//js handles most cases implicitly.
+
+//js operations: js internally use them.
+//ToString
+//ToNumber
+//ToBoolean
+//ToPrimitive
+
+console.log('abcd'-1); //NaN
+console.log('0xabcd'-1); //43981 //hexadecimal number
+
+//* ToString operation: 
+//null ->"null"
+//undefined -> 'undefined'
+//true -> 'true'
+//false -> 'false'
+//0 ->'0'
+//[] -> ''
+//[1,2,3] -> "1,2, 3"
+
+
+//* ToPrimitive operation: 
+//takes input argument and converts it into non object type(primitive type).' 
 
 
