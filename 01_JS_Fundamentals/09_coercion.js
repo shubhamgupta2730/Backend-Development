@@ -109,10 +109,10 @@ console.log('true' - 8); //NaN
 //ToBoolean
 //ToPrimitive
 
-console.log('abcd'-1); //NaN
-console.log('0xabcd'-1); //43981 //hexadecimal number
+console.log('abcd' - 1); //NaN
+console.log('0xabcd' - 1); //43981 //hexadecimal number
 
-//* ToString operation: 
+//* ToString operation:
 //null ->"null"
 //undefined -> 'undefined'
 //true -> 'true'
@@ -122,7 +122,68 @@ console.log('0xabcd'-1); //43981 //hexadecimal number
 //[1,2,3] -> "1,2, 3"
 
 
-//* ToPrimitive operation: 
-//takes input argument and converts it into non object type(primitive type).' 
+//* ToPrimitive operation:
+//takes input argument and converts it into non object type(primitive type).'
+
+//* ToBoolean operation:
+//ToBoolean abstract operation converts the given type to a Boolean value. ToBoolean works a bit differently when compared to ToString or ToNumber. It maintains a list of values which when received as an argument returns false.
+//and everything apart from the list of values return true.
+
+//? list of falsy values:
+//null
+//undefined
+//+0
+//-0
+//Nan
+//"" empty string
+//false
+//apart from these values, all are truthy values.
+
+//?How can we use ToBoolean operator:
+//we can use logical NOT operator(!);
+
+//. !(NOT) on falsy values returns truthy values.
+
+
+//! difference between == and === operator?
+
+// == is known as Abstract equality comparison.
+// === is known as Strict equality comparison.
+
+// == checks that if type of both the operands are same, then it performs the strict equality comparison(===) between operands.
+
+// === checks if type of both the operands are different then it returns false.
+
+//the main difference is :
+//abstract equality does coercion if type are not same, but strict equality does not do that.
+
+//if any number is NaN in strict equality return false.
+
+// 0 === -0 : returns true
+
+//!read official documentations>>>>>>>>>>>
+
+
+//* Abstract equality comparison:
+//this operator also check types
+
+console.log(null == undefined); //true
+//if one operand is number and another is string , it will convert string to a number.
+console.log(100=='100');
+//boolean will be converted into number, example: false converts to 0;
+//if one operand is object, then ToPrimitive is applied on that operand.
+
+
+//? when to use == and ===??
+// try to use == whenever needed and avoid === . 
+
+// shell script  is purely interpreted language. Means it prints outputs line by line, means if line 1  and line 2 are correct and line 3 has some error then it will print line 1 and line 2 and then give error for line 3.
+
+// java, js, python are compiled and interpreted language. means if there is error in any of the line, then the complier throws a error. 
+
+
+
+
+
 
 
