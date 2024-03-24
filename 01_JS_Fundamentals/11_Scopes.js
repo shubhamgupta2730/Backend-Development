@@ -9,11 +9,11 @@
 ///how to define global scope - to declare / define variables outside any functions.
 
 var name = 'shubham'
-function greet(){
+function greet() {
   console.log("greetings: ", name);
 }
 
-function fun(){
+function fun() {
   console.log("have fun", name);
 }
 
@@ -25,10 +25,10 @@ fun();
 //? function scope: 
 // in function scope the visibility of function or variable is just inside the outer function.
 var name = 'shubham';
-function fun1(){
+function fun1() {
   console.log('fun1', name);
-  var test= "inside fun called";
-  function insidefun(){
+  var test = "inside fun called";
+  function insidefun() {
     console.log("Inside fun called", test);
   }
   insidefun();
@@ -39,7 +39,7 @@ fun1();
 // In js , a pair of curly braces is used to declare a block.
 // Now variable or function is accessible or visible inside a block then it will have block scope.
 
-if(true){
+if (true) {
   let x = 10;
   console.log(x);  // inside the block
 }
@@ -50,7 +50,7 @@ if(true){
 // var: whenever var is used anywhere inside a function, the varaible gets functions scope. 
 
 //example: 
-function fun2(){
+function fun2() {
   console.log("used before declarations:", x);  //x will give undefined. here , see it in lexical scopes.
   var x = 10;
   console.log(x);
@@ -62,7 +62,7 @@ fun2();
 //let: whenever we initialize a variable with let, it always gets the scope of enclosing block.
 {
   //console.log(x);  // not accessible before declaration of variable inside scope also.
-  let x =10;
+  let x = 10;
   console.log(x);
 }
 //console.log(x);   // x not accessible.
@@ -72,8 +72,8 @@ fun2();
 
 //example: 
 var f = 9;
-var f=10;
-let h =10;
+var f = 10;
+let h = 10;
 //let h=12; redeclaration not allowed.
 
 // if we declare outside any block then it does not get complete global scope. means we cannot use let in global scope before declaration while we can use var before declaration. 
@@ -113,7 +113,7 @@ let h =10;
 // Hoisting is direct consequence of lexical parsing that happens in js, due to which we are able to access some function and variables before declaring them. which gives the notion that they are moved up in the file . 
 
 //? autoglobals: 
-function fun3(){
+function fun3() {
   teachAssistant = "abcd";     // autoglobal, as it is not a formal declaration. 
   console.log(teachAssistant);
 }
@@ -122,7 +122,7 @@ fun3();
 //* "use strict" //for using the strict mode in js. 
 
 
-function fun4(){
+function fun4() {
   "use strict";
   teachAssistant = "abcd";     // autoglobal, as it is not a formal declaration. 
   console.log(teachAssistant);
@@ -133,5 +133,23 @@ fun4(); // now this will give error, and not able to execute autoglobal variable
 
 //? IIFE - immediately involved function expression
 
-//* function expression - 
+//* function expression -
 //when a declared function does not starts with keyword function written , then it is function expression.
+//when a function is declared and assigned to a variable.
+
+//we can pass function as an argument to another function.
+//function expressions are of 2 types : 1) anonymous , 2) named
+
+//1) anonymous: 
+/*
+var x = function gun (){  //here gun function scope is inside the scope of x, not global scope
+  implementation
+}
+gun(function(){
+  implementation
+});
+*/
+//above code is not of good quality. 
+//because without the  name of the function we cant predict the working of the function, so this anonymous functions are not good for readability.
+
+// console.trace(); is used to trace the function details or function call.
