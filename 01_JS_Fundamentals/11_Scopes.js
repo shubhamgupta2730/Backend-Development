@@ -97,7 +97,41 @@ let h =10;
 //2. it will be used to retrieve a a value  ie. it will be used as a source.
 // example: y=10+x;
 
-//? whenever we declare a variable using let/var/const , it is a formal declaration. or initialzing a function is also a formal declaration. 
+//? whenever we declare a variable using let/var/const , it is a formal declaration. or initializing a function is also a formal declaration. 
 
 //* autoglobals: in js if we keep an scope of variable in outer scope, and no where find it, we automatically consider it in global scope.
 
+//!undefined vs undeclared: 
+// undefined is a variable state when the scopes already know about it, but in the execution phase we have not allocated it a value.
+//so when a variable is declared in var or let or const , and we use it before declaration, then it shows undefined. 
+//
+//undeclared is a variable stats when we never formally declare a variable.
+//means we are not using var/let/const while declaring a variable , so when we use that variable before the declaration, then it throws error, that it is not able to find the variable , in function as well as global scope
+
+
+//? Hoisting 
+// Hoisting is direct consequence of lexical parsing that happens in js, due to which we are able to access some function and variables before declaring them. which gives the notion that they are moved up in the file . 
+
+//? autoglobals: 
+function fun3(){
+  teachAssistant = "abcd";     // autoglobal, as it is not a formal declaration. 
+  console.log(teachAssistant);
+}
+fun3();
+//to avoid autoGlobal declarations in code, we can use strict mode.
+//* "use strict" //for using the strict mode in js. 
+
+
+function fun4(){
+  "use strict";
+  teachAssistant = "abcd";     // autoglobal, as it is not a formal declaration. 
+  console.log(teachAssistant);
+}
+
+fun4(); // now this will give error, and not able to execute autoglobal variables. 
+
+
+//? IIFE - immediately involved function expression
+
+//* function expression - 
+//when a declared function does not starts with keyword function written , then it is function expression.
