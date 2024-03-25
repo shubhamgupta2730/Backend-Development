@@ -1,6 +1,6 @@
 // NaN stands for not a number
 //it dosen't actually mean not a number, rather it guess notion of an invalid number.
-//NaN ===NaN returns false, it checks on any operand if there is NaN , if donsent check for another operand , and returns false.
+//NaN ===NaN returns false, it checks on any operand if there is NaN , if dosen't check for another operand , and returns false.
 
 console.log(1 / 0); //infinity
 
