@@ -46,3 +46,14 @@ mapper(arr, function cuber(v,i){
 });
 console.log(x, arr);
 
+
+
+//? disadvantages of Callbacks
+
+//1. Callback hell- multiple nested callbacks.- they make code complex to understand.
+//2. Inversion of Control - if there is some part of code, whose control we are passing to someone else, and we dont know how that part will be executed, this problem is known as inversion of control.
+
+//! to solve these problems, we use Promises.
+
+
+//

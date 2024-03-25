@@ -51,5 +51,10 @@ console.log("finished execution");
 
 
 
+//* how console.log works internally>>
+// it is not a js function, it is a feature of runtime, 
+// internally console.log uses process.stdout.write
+
+
 
 
