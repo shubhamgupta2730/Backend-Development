@@ -24,6 +24,7 @@ console.log(x);
 
 
 
+
 //* custom mapper function: 
 function mapper(arr, fn){
   //arr->is going to be an array of elements.
@@ -44,3 +45,4 @@ mapper(arr, function cuber(v,i){
   return v*v*v;
 });
 console.log(x, arr);
+
