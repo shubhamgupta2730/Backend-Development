@@ -189,6 +189,7 @@ function uploadData(data, url){
     setTimeout(function processUpload(){
       let result = 'success';
       console.log('uploading done');
+      //if we don't return then by default undefined will be returned.
       resolve(result);
     },5000)
   })
@@ -221,7 +222,7 @@ downloadPromise.then(function processDownload(value){
 
 //there is also promise  hell in this as same in callback function, but here , there in no inversion of control, because as resolve() is executed , it can execute only once, we cannot write it multiple times as in callbacks we can create multiple functions. so it is better.and solving the problem of inversion of control.
 
-let downloadPromise = fetchData2('www.google.com');
+let downloadPromise2 = fetchData2('www.google.com');
 downloadPromise
 .then(function processDownload(value){
   console.log('downloading with following value: ', value);
@@ -237,5 +238,41 @@ downloadPromise
 .then(function process(){
   console.log('done');
 })
+//.then() also returns a promise.
+//!------------------------------------------------------------------------------------------------
+//* microtask queue: promise based , microtask queue has higher priority as compare to task queue.  
+//!------------------------------------------------------------------------------------------------
+//? Promise.resolve() is a method or function that returns a promise object that is resolved.
+//? Promise.reject() is a method that returns a promise object that is rejected.
 
-//* microtask queue: promise based 
+console.log("Start of file: ");
+setTimeout(function timer1(){
+  console.log('timer 1 done');
+
+},0);
+for(let i=0; i<10000000000; i++){
+  //some code
+};
+let x= Promise.resolve("Sanket's promise");
+x.then(function processPromise(value){
+  console.log('whose promise', value);
+
+});
+setTimeout(function timer2(){
+  console.log('timer 2 done');
+}, 0);
+console.log('end of file');
+
+//!promises callbacks goes to microtask queue, and has higher priority to be executed.
+//! normal callbacks goes to event queue.
+/*
+output: 
+start of file
+end of file
+whose promise? sanket's promise
+timer 1 done
+timer 2 done
+*/
+
+
+
